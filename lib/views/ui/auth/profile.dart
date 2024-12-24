@@ -200,6 +200,7 @@ class _ProfilePageState extends State<ProfilePage> {
                           ),
                         ],
                       ),
+
                       const HeightSpacer(size: 20),
                       Container(
                         padding: EdgeInsets.only(left: 8.w),
