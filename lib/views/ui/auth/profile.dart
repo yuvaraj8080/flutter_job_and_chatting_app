@@ -100,6 +100,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                         Color(kDark.value),
                                         FontWeight.w600,
                                       ),
+
                                     ),
                                     Row(
                                       children: [
