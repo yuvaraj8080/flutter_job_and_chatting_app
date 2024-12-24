@@ -48,7 +48,7 @@ class DeviceManagement extends StatelessWidget {
                   DevicesInfo(
                     date: loginDate,
                     device: 'MacBook M2',
-                    ipAdress: '10.0.12.000',
+                    ipAddress: '10.0.12.000',
                     location: 'Washington DC',
                     platform: 'Apple Webkit',
                   ),
@@ -56,7 +56,7 @@ class DeviceManagement extends StatelessWidget {
                   DevicesInfo(
                     date: loginDate,
                     device: 'iPhone 14',
-                    ipAdress: '10.0.12.000',
+                    ipAddress: '10.0.12.000',
                     location: 'Brooklyn',
                     platform: 'Mobile App',
                   ),

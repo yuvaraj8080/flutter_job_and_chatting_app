@@ -9,7 +9,7 @@ class DevicesInfo extends StatelessWidget {
     required this.device,
     required this.platform,
     required this.date,
-    required this.ipAdress,
+    required this.ipAddress,
     super.key,
   });
 
@@ -17,7 +17,7 @@ class DevicesInfo extends StatelessWidget {
   final String device;
   final String platform;
   final String date;
-  final String ipAdress;
+  final String ipAddress;
 
   @override
   Widget build(BuildContext context) {
@@ -33,6 +33,7 @@ class DevicesInfo extends StatelessWidget {
           style: appstyle(22, Color(kDark.value), FontWeight.bold),
         ),
         const HeightSpacer(size: 15),
+
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -44,7 +45,7 @@ class DevicesInfo extends StatelessWidget {
                   style: appstyle(16, Color(kDarkGrey.value), FontWeight.w400),
                 ),
                 ReusableText(
-                  text: ipAdress,
+                  text: ipAddress,
                   style: appstyle(16, Color(kDarkGrey.value), FontWeight.w400),
                 ),
               ],
