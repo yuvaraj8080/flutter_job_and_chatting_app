@@ -13,12 +13,13 @@ class LoginNotifier extends ChangeNotifier {
 
   bool get obscureText => _obscureText;
 
+  //// OBSCURE TEXT
   set obscureText(bool newState) {
     _obscureText = newState;
     notifyListeners();
   }
 
-
+/////CHECK USAER IS FIRST TIME LOGIN
   bool _firstTime = true;
   bool get firstTime => _firstTime;
 
@@ -28,6 +29,7 @@ class LoginNotifier extends ChangeNotifier {
   }
 
 
+  ///// CHECK USER ENTRY POINTS
   bool? _entrypoint;
   bool get entrypoint => _entrypoint ?? false;
 
@@ -37,6 +39,7 @@ class LoginNotifier extends ChangeNotifier {
   }
 
 
+  ///// CHECK USER LOGIN
   bool? _loggedIn;
   bool get loggedIn => _loggedIn ?? false;
 
@@ -45,6 +48,8 @@ class LoginNotifier extends ChangeNotifier {
     notifyListeners();
   }
 
+
+  /////GET  PREFERANCE
   getPrefs() async {
     final prefs = await SharedPreferences.getInstance();
 
@@ -82,6 +87,8 @@ class LoginNotifier extends ChangeNotifier {
     }
   }
 
+
+  ///// USER LOGIN METHOD HARE /////
   // Fix: make nullable for proper push to home after login
   Future<void> userLogin(LoginModel model) async {
     await AuthHelper.login(model).then((response) async {
@@ -109,6 +116,8 @@ class LoginNotifier extends ChangeNotifier {
     });
   }
 
+
+  ///// LOGOUT METHOD HARE /////
   logout() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('loggedIn', false);
@@ -120,6 +129,8 @@ class LoginNotifier extends ChangeNotifier {
     });
   }
 
+
+  ///// UPDATE PROFILE METHOD HARE /////
   updateProfile(ProfileUpdateReq model) async {
     await AuthHelper.updateProfile(model).then((response) {
       if (response) {
@@ -131,7 +142,7 @@ class LoginNotifier extends ChangeNotifier {
           icon: const Icon(Icons.add_alert),
         );
 
-        Future.delayed(const Duration(seconds: 3)).then((value) {
+        Future.delayed(const Duration(seconds: 2)).then((value) {
           Get.offAll(() => const MainScreen());
         });
       } else {

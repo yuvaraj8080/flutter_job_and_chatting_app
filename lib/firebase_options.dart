@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -50,23 +47,30 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAQwbwfMbYPUqsXaM7b3xGcsAKtN8JKO9E',
-    appId: '1:438442066203:android:e62bd996fcdfa6150513be',
-    messagingSenderId: '438442066203',
-    projectId: 'wilinxhub',
-    storageBucket: 'wilinxhub.appspot.com',
+    apiKey: 'AIzaSyCeTBozsvB3j23a1IEAeTjtFo1BwVGP-bA',
+    appId: '1:450975758480:android:d7ccf2557aef61ce488015',
+    messagingSenderId: '450975758480',
+    projectId: 'vehicledispatchapp',
+    storageBucket: 'vehicledispatchapp.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyD0Xm3XiKALFWP2D2fioxx3hjydJADe0Ec',
-    appId: '1:438442066203:ios:2e1194f32139f9070513be',
-    messagingSenderId: '438442066203',
-    projectId: 'wilinxhub',
-    storageBucket: 'wilinxhub.appspot.com',
-    androidClientId:
-        '438442066203-md1gclmtvskmep1olr0u29k5ru244qm8.apps.googleusercontent.com',
-    iosClientId:
-        '438442066203-v9khert0pi45es2bqu4ppg84q31r9ffo.apps.googleusercontent.com',
+    apiKey: 'AIzaSyBeVwL8xJDgTW0oWOUqQMLvhGpT3ZROHZ0',
+    appId: '1:450975758480:ios:42f54e5332224f62488015',
+    messagingSenderId: '450975758480',
+    projectId: 'vehicledispatchapp',
+    storageBucket: 'vehicledispatchapp.appspot.com',
     iosBundleId: 'com.example.jobhubV1',
   );
+
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyBvecCe79Fsjdoc533yRr6UkZKNrtZYgnI',
+    appId: '1:450975758480:web:42e47ae3779f6637488015',
+    messagingSenderId: '450975758480',
+    projectId: 'vehicledispatchapp',
+    authDomain: 'vehicledispatchapp.firebaseapp.com',
+    storageBucket: 'vehicledispatchapp.appspot.com',
+    measurementId: 'G-V91DMSS44Q',
+  );
+
 }

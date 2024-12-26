@@ -38,6 +38,7 @@ class SignUpNotifier extends ChangeNotifier {
     }
   }
 
+
   upSignup(SignupModel model) {
     AuthHelper.signup(model).then((response) {
       if (response[0]) {

@@ -54,6 +54,7 @@ class AuthHelper {
       final requestHeaders = <String, String>{
         'Content-Type': 'application/json'
       };
+
       final url = Uri.http(Config.apiUrl, Config.signupUrl);
       debugPrint(jsonEncode(model));
       final response = await client.post(
@@ -72,6 +73,7 @@ class AuthHelper {
       return [false, e.toString()];
     }
   }
+
 
   static Future<bool> updateProfile(ProfileUpdateReq model) async {
     final prefs = await SharedPreferences.getInstance();

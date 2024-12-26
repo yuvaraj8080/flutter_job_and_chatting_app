@@ -203,15 +203,15 @@ class _PersonalDetailsState extends State<PersonalDetails> {
                                 );
                               } else {
                                 final model = ProfileUpdateReq(
-                                  location: location.text,
-                                  phone: phone.text,
+                                  location: location.text.trim(),
+                                  phone: phone.text.trim(),
                                   profile: imageUploada.imageUrl.toString(),
                                   skills: [
-                                    skill0.text,
-                                    skill1.text,
-                                    skill2.text,
-                                    skill3.text,
-                                    skill4.text,
+                                    skill0.text.trim(),
+                                    skill1.text.trim(),
+                                    skill2.text.trim(),
+                                    skill3.text.trim(),
+                                    skill4.text.trim(),
                                   ],
                                 );
 

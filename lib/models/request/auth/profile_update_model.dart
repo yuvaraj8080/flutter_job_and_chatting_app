@@ -6,7 +6,15 @@ ProfileUpdateReq profileUpdateReqFromJson(String str) =>
 String profileUpdateReqToJson(ProfileUpdateReq data) =>
     json.encode(data.toJson());
 
+
+
 class ProfileUpdateReq {
+
+  final String location;
+  final String phone;
+  final String profile;
+  final List<String> skills;
+
   ProfileUpdateReq({
     required this.location,
     required this.phone,
@@ -22,10 +30,6 @@ class ProfileUpdateReq {
         skills: List<String>.from(json['skills'].map((x) => x)),
       );
 
-  final String location;
-  final String phone;
-  final String profile;
-  final List<String> skills;
 
   Map<String, dynamic> toJson() => {
         'location': location,

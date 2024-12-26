@@ -148,9 +148,9 @@ class _RegistrationPageState extends State<RegistrationPage> {
                 CustomButton(
                   onTap: () {
                     final model = SignupModel(
-                      username: name.text,
-                      email: email.text,
-                      password: password.text,
+                      username: name.text.trim(),
+                      email: email.text.trim(),
+                      password: password.text.trim(),
                     );
 
                     signupNotifier.upSignup(model);

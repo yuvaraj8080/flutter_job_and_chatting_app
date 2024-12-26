@@ -1,151 +1,64 @@
 {
   "project_info": {
-    "project_number": "438442066203",
-    "project_id": "wilinxhub",
-    "storage_bucket": "wilinxhub.appspot.com"
+    "project_number": "450975758480",
+    "project_id": "vehicledispatchapp",
+    "storage_bucket": "vehicledispatchapp.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:438442066203:android:fd35ddc67ac383ca0513be",
+        "mobilesdk_app_id": "1:450975758480:android:88e8652639e97171488015",
         "android_client_info": {
-          "package_name": "com.dbestech.jobfinder"
+          "package_name": "com.VoiceAssistant"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "438442066203-3a3dqg4o0lkpuf5f31sd1rfjitngd0n7.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAQwbwfMbYPUqsXaM7b3xGcsAKtN8JKO9E"
+          "current_key": "AIzaSyCeTBozsvB3j23a1IEAeTjtFo1BwVGP-bA"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "438442066203-3a3dqg4o0lkpuf5f31sd1rfjitngd0n7.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "438442066203-0lbvahg5tvesqr27umq95den4taoh915.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.dbestech.jobhub"
-              }
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:438442066203:android:a552e0338c45ca4f0513be",
-        "android_client_info": {
-          "package_name": "com.dbestech.jobhub"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "438442066203-3a3dqg4o0lkpuf5f31sd1rfjitngd0n7.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAQwbwfMbYPUqsXaM7b3xGcsAKtN8JKO9E"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "438442066203-3a3dqg4o0lkpuf5f31sd1rfjitngd0n7.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "438442066203-0lbvahg5tvesqr27umq95den4taoh915.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.dbestech.jobhub"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:438442066203:android:e62bd996fcdfa6150513be",
+        "mobilesdk_app_id": "1:450975758480:android:d7ccf2557aef61ce488015",
         "android_client_info": {
           "package_name": "com.example.jobhub_v1"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "438442066203-3a3dqg4o0lkpuf5f31sd1rfjitngd0n7.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAQwbwfMbYPUqsXaM7b3xGcsAKtN8JKO9E"
+          "current_key": "AIzaSyCeTBozsvB3j23a1IEAeTjtFo1BwVGP-bA"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "438442066203-3a3dqg4o0lkpuf5f31sd1rfjitngd0n7.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "438442066203-0lbvahg5tvesqr27umq95den4taoh915.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.dbestech.jobhub"
-              }
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:438442066203:android:518fac104abb82d20513be",
+        "mobilesdk_app_id": "1:450975758480:android:9b919a3fe65608ec488015",
         "android_client_info": {
-          "package_name": "com.example.jobhubtest"
+          "package_name": "com.example.vechile_dispatch_app"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "438442066203-3a3dqg4o0lkpuf5f31sd1rfjitngd0n7.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAQwbwfMbYPUqsXaM7b3xGcsAKtN8JKO9E"
+          "current_key": "AIzaSyCeTBozsvB3j23a1IEAeTjtFo1BwVGP-bA"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "438442066203-3a3dqg4o0lkpuf5f31sd1rfjitngd0n7.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "438442066203-0lbvahg5tvesqr27umq95den4taoh915.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.dbestech.jobhub"
-              }
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

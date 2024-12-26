@@ -6,6 +6,11 @@ SignupModel signupModelFromJson(String str) =>
 String signupModelToJson(SignupModel data) => json.encode(data.toJson());
 
 class SignupModel {
+
+  final String username;
+  final String email;
+  final String password;
+
   SignupModel({
     required this.username,
     required this.email,
@@ -18,9 +23,7 @@ class SignupModel {
         password: json['password'],
       );
 
-  final String username;
-  final String email;
-  final String password;
+
 
   Map<String, dynamic> toJson() => {
         'username': username,

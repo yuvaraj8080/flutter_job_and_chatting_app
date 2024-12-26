@@ -16,6 +16,7 @@ class ImageUpoader extends ChangeNotifier {
 
   List<String> imageFil = [];
 
+  //// FUNCTION TO GET
   Future<void> pickImage() async {
     var imageFile = await _picker.pickImage(source: ImageSource.gallery);
 
@@ -39,7 +40,7 @@ class ImageUpoader extends ChangeNotifier {
       // aspectRatioPresets: [
       //   CropAspectRatioPreset.ratio5x4,
       // ],
-      //
+
       uiSettings: [
         AndroidUiSettings(
           toolbarTitle: 'JobHub Cropper',
