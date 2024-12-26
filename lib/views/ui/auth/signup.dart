@@ -101,7 +101,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                   hintText: 'Password',
                   obscureText: signupNotifier.obscureText,
                   validator: (password) {
-                    if (password!.isEmpty || password.length < 8) {
+                    if (password!.isEmpty || password.length < 5) {
                       return 'Please enter a valid password with at least one uppercase, one lowercase, one digit, a special character and length of 5 characters';
                     }
                     return null;
@@ -152,7 +152,6 @@ class _RegistrationPageState extends State<RegistrationPage> {
                       email: email.text.trim(),
                       password: password.text.trim(),
                     );
-
                     signupNotifier.upSignup(model);
                   },
                   text: 'Sign Up',

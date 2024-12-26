@@ -39,6 +39,7 @@ class SignUpNotifier extends ChangeNotifier {
   }
 
 
+  ///// SIGNUP NEVEGATE IS HARE /////
   upSignup(SignupModel model) {
     AuthHelper.signup(model).then((response) {
       if (response[0]) {
