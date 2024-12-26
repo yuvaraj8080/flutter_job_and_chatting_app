@@ -20,9 +20,9 @@ class AuthHelper {
     ErrorRes? error;
     final requestHeaders = <String, String>{'Content-Type': 'application/json'};
 
-    final url = Uri.http(Config.apiUrl, Config.loginUrl);
+    final Uri url = Config.getFullUrl(Config.loginUrl);
     final response = await client.post(
-      url,
+      url, // Ensure this is a valid URL
       headers: requestHeaders,
       body: jsonEncode(model),
     );
@@ -55,7 +55,7 @@ class AuthHelper {
         'Content-Type': 'application/json'
       };
 
-      final url = Uri.http(Config.apiUrl, Config.signupUrl);
+      final Uri url = Config.getFullUrl(Config.signupUrl);
       debugPrint(jsonEncode(model));
       final response = await client.post(
         url,
