@@ -12,7 +12,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 Widget defaultHome = const OnBoardingScreen();
 
+
 void main() async {
+
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 

@@ -1,6 +1,6 @@
 class Config {
   // static const apiUrl = "a821-159-138-45-185.ngrok-free.app";
-  static const apiUrl = '192.168.1.117:8080';
+  static const apiUrl = 'https://flutterjobandchattingserver-production.up.railway.app';
   static const String loginUrl = '/api/login';
   static const String signupUrl = '/api/register';
   static const String jobs = '/api/jobs';

@@ -18,8 +18,8 @@ class LoginNotifier extends ChangeNotifier {
     notifyListeners();
   }
 
-  bool _firstTime = true;
 
+  bool _firstTime = true;
   bool get firstTime => _firstTime;
 
   set firstTime(bool newState) {
@@ -27,8 +27,8 @@ class LoginNotifier extends ChangeNotifier {
     notifyListeners();
   }
 
-  bool? _entrypoint;
 
+  bool? _entrypoint;
   bool get entrypoint => _entrypoint ?? false;
 
   set entrypoint(bool newState) {
@@ -36,8 +36,8 @@ class LoginNotifier extends ChangeNotifier {
     notifyListeners();
   }
 
-  bool? _loggedIn;
 
+  bool? _loggedIn;
   bool get loggedIn => _loggedIn ?? false;
 
   set loggedIn(bool newState) {

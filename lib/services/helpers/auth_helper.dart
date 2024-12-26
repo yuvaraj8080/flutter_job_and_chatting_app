@@ -11,9 +11,11 @@ import 'package:jobhub_v1/models/response/auth/profile_model.dart';
 import 'package:jobhub_v1/services/config.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+
 class AuthHelper {
   static https.Client client = https.Client();
 
+  //// LOGIN
   static Future<List<dynamic>> login(LoginModel model) async {
     ErrorRes? error;
     final requestHeaders = <String, String>{'Content-Type': 'application/json'};
