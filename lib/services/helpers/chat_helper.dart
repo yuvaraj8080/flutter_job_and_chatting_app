@@ -47,7 +47,8 @@ class ChatHelper {
        'token': 'Bearer $token',
      };
 
-     final url = Uri.http(Config.apiUrl, Config.chatsUrl);
+     final Uri url = Config.getFullUrl(Config.chatsUrl);
+
      final response = await client.get(
        url,
        headers: requestHeaders,

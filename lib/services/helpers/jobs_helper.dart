@@ -14,7 +14,8 @@ class JobsHelper {
         'Content-Type': 'application/json',
       };
 
-      final url = Uri.http(Config.apiUrl, Config.jobs);
+      final Uri url = Config.getFullUrl(Config.jobs);
+
       print(url);
       final response = await client.get(
         url,
@@ -41,7 +42,8 @@ class JobsHelper {
         'Content-Type': 'application/json',
       };
 
-      final url = Uri.http(Config.apiUrl, '${Config.jobs}/$jobId');
+      final Uri url = Config.getFullUrl('${Config.jobs}/$jobId');
+
       final response = await client.get(
         url,
         headers: requestHeaders,
@@ -66,6 +68,9 @@ class JobsHelper {
     };
 
     final url = Uri.http(Config.apiUrl, Config.jobs, {'new': 'true'});
+    // final Uri url = Config.getFullUrl(Config.jobs);
+
+
     final response = await client.get(
       url,
       headers: requestHeaders,
@@ -87,7 +92,8 @@ class JobsHelper {
       'Content-Type': 'application/json',
     };
 
-    final url = Uri.http(Config.apiUrl, '${Config.search}/$searchQeury');
+    final Uri url = Config.getFullUrl('${Config.search}/$searchQeury');
+
     final response = await client.get(
       url,
       headers: requestHeaders,

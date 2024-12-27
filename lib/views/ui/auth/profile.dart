@@ -47,9 +47,11 @@ class _ProfilePageState extends State<ProfilePage> {
                   child: CircularProgressIndicator(),
                 );
               } else if (snapshot.hasError) {
-                return Text('Error ${snapshot.error}');
+                return Center(child: Text('Error: ${snapshot.error}'));
+              } else if (!snapshot.hasData || snapshot.data == null) {
+                return Center(child: Text('No profile data available.'));
               } else {
-                final UserData = snapshot.data;
+                final UserData = snapshot.data!;
                 return Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: ListView(
@@ -78,7 +80,7 @@ class _ProfilePageState extends State<ProfilePage> {
                                   // change the profile everywhere and
                                   // correct the backend code or wherever
                                   // it was being set as null
-                                  child: UserData!.profile == 'null'
+                                  child: UserData.profile == 'null'
                                       ? Image.asset(
                                           'assets/images/user.png',
                                         )
