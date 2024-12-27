@@ -69,6 +69,7 @@ class _LoginPageState extends State<LoginPage> {
                       FontWeight.w600,
                     ),
                   ),
+
                   const HeightSpacer(size: 50),
                   CustomTextField(
                     controller: email,

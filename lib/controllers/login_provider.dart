@@ -62,6 +62,8 @@ class LoginNotifier extends ChangeNotifier {
     }
   }
 
+
+  ///// THIS IS THE VALIDATION AND GLOBAL KEY //////
   final loginFormKey = GlobalKey<FormState>();
   final profileFormKey = GlobalKey<FormState>();
 
@@ -75,7 +77,6 @@ class LoginNotifier extends ChangeNotifier {
       return false;
     }
   }
-
   bool profileValidation() {
     final form = profileFormKey.currentState;
 

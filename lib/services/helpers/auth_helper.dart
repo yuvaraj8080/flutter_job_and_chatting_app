@@ -15,7 +15,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 class AuthHelper {
   static https.Client client = https.Client();
 
-  //// LOGIN
+  //// LOGIN SERVICES
   static Future<List<dynamic>> login(LoginModel model) async {
     ErrorRes? error;
     final requestHeaders = <String, String>{'Content-Type': 'application/json'};
@@ -48,6 +48,8 @@ class AuthHelper {
     }
   }
 
+
+  ///// SIGNUP SERVICES /////
   static Future<List<dynamic>> signup(SignupModel model) async {
     ErrorRes? error;
     try {
@@ -75,6 +77,7 @@ class AuthHelper {
   }
 
 
+  ///// UPDATE PROFILE SERVICES /////
   static Future<bool> updateProfile(ProfileUpdateReq model) async {
     final prefs = await SharedPreferences.getInstance();
     final token = prefs.getString('token');

@@ -6,6 +6,8 @@ class ProfileNotifier extends ChangeNotifier {
   // Fix: make nullable for proper push to home after login
 
   Future<ProfileRes?>? profile;
+
+  //// GET PROFILE ////
   getProfile() async {
     profile = AuthHelper.getProfile();
   }

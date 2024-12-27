@@ -1,11 +1,22 @@
 import 'dart:convert';
 
-ProfileRes profileResFromJson(String str) =>
-    ProfileRes.fromJson(json.decode(str));
+ProfileRes profileResFromJson(String str) => ProfileRes.fromJson(json.decode(str));
 
 String profileResToJson(ProfileRes data) => json.encode(data.toJson());
 
 class ProfileRes {
+
+  final String id;
+  final String username;
+  final String email;
+  final bool isAdmin;
+  final bool isAgent;
+  final List<String> skills;
+  final DateTime updatedAt;
+  final String location;
+  final String phone;
+  final String profile;
+
   ProfileRes({
     required this.id,
     required this.username,
@@ -31,17 +42,6 @@ class ProfileRes {
         phone: json['phone'],
         profile: json['profile'],
       );
-
-  final String id;
-  final String username;
-  final String email;
-  final bool isAdmin;
-  final bool isAgent;
-  final List<String> skills;
-  final DateTime updatedAt;
-  final String location;
-  final String phone;
-  final String profile;
 
   Map<String, dynamic> toJson() => {
         '_id': id,
