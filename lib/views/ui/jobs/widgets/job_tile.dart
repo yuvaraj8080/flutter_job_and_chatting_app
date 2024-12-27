@@ -34,7 +34,7 @@ class VerticalTileWidget extends StatelessWidget {
                   Row(
                     children: [
                       CircleAvatar(
-                        radius: 30,
+                        radius: 25,
                         backgroundImage: NetworkImage(job.imageUrl),
                       ),
                       const WidthSpacer(width: 10),
@@ -44,7 +44,7 @@ class VerticalTileWidget extends StatelessWidget {
                           ReusableText(
                             text: job.company,
                             style: appstyle(
-                              22,
+                              15,
                               Color(kDark.value),
                               FontWeight.w600,
                             ),
@@ -54,7 +54,7 @@ class VerticalTileWidget extends StatelessWidget {
                             child: ReusableText(
                               text: job.title,
                               style: appstyle(
-                                20,
+                                16,
                                 Color(kDarkGrey.value),
                                 FontWeight.w600,
                               ),
@@ -79,12 +79,12 @@ class VerticalTileWidget extends StatelessWidget {
                   children: [
                     ReusableText(
                       text: job.salary,
-                      style: appstyle(22, Color(kDark.value), FontWeight.w600),
+                      style: appstyle(16, Color(kDark.value), FontWeight.w600),
                     ),
                     ReusableText(
                       text: '/${job.period}',
                       style: appstyle(
-                        20,
+                        16,
                         Color(kDarkGrey.value),
                         FontWeight.w600,
                       ),
