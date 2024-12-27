@@ -84,7 +84,7 @@ class AuthHelper {
       'token': 'Bearer $token',
     };
 
-    final url = Uri.http(Config.apiUrl, Config.profileUrl);
+    final Uri url = Config.getFullUrl(Config.profileUrl);
     final response = await client.put(
       url,
       headers: requestHeaders,
@@ -114,7 +114,7 @@ class AuthHelper {
       'token': 'Bearer $token',
     };
 
-    final url = Uri.http(Config.apiUrl, Config.profileUrl);
+    final Uri url = Config.getFullUrl(Config.profileUrl);
     final response = await client.get(
       url,
       headers: requestHeaders,

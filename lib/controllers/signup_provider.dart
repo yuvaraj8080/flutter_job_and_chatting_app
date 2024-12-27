@@ -49,10 +49,8 @@ class SignUpNotifier extends ChangeNotifier {
           duration: const Duration(seconds: 2),
         );
       } else {
-        print(response.toString());
         Get.snackbar(
           'Sign up Failed',
-
           response[1],
           colorText: Color(kLight.value),
           backgroundColor: Colors.red,

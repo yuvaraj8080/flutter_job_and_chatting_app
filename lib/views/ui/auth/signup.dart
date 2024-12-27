@@ -121,27 +121,20 @@ class _RegistrationPageState extends State<RegistrationPage> {
                 const HeightSpacer(size: 10),
                 Align(
                   alignment: Alignment.centerRight,
-                  child: GestureDetector(
-                    onTap: () {
-                      Get.offAll(() => const LoginPage(drawer: true));
-                    },
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        ReusableText(
-                          text: 'Password should be at least 8 characters',
-                          style: appstyle(9, kOrange, FontWeight.w500),
-                        ),
-                        ReusableText(
-                          text: 'Login',
-                          style: appstyle(
-                            14,
-                            Color(kDark.value),
-                            FontWeight.w500,
-                          ),
-                        ),
-                      ],
-                    ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      ReusableText(
+                        text: 'Password should be at least 5 characters',
+                        style: appstyle(9, kOrange, FontWeight.w500),
+                      ),
+
+                      SizedBox(
+                        height:35,
+                          child: OutlinedButton(onPressed:(){
+                            Get.offAll(() => const LoginPage(drawer: true));
+                          },child:Text("Login"))),
+                    ],
                   ),
                 ),
                 const HeightSpacer(size: 50),

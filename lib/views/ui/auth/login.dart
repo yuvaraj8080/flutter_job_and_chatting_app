@@ -110,19 +110,11 @@ class _LoginPageState extends State<LoginPage> {
                   const HeightSpacer(size: 10),
                   Align(
                     alignment: Alignment.centerRight,
-                    child: GestureDetector(
-                      onTap: () {
-                        Get.offAll(() => const RegistrationPage());
-                      },
-                      child: ReusableText(
-                        text: 'Register',
-                        style: appstyle(
-                          14,
-                          Color(kDark.value),
-                          FontWeight.w500,
-                        ),
-                      ),
-                    ),
+                    child: SizedBox(
+                        height:35,
+                        child: OutlinedButton(onPressed:(){
+                          Get.offAll(() => RegistrationPage);
+                        },child:Text("Register"))),
                   ),
                   const HeightSpacer(size: 50),
                   CustomButton(
