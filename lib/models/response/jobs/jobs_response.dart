@@ -8,6 +8,22 @@ List<JobsResponse> jobsResponseFromJson(String str) =>
         .toList();
 
 class JobsResponse {
+
+  final String id;
+  final String title;
+  final String location;
+  final String company;
+  final bool hiring;
+  final String description;
+  final String salary;
+  final String period;
+  final String contract;
+  final List<String> requirements;
+  final String imageUrl;
+  final String agentId;
+  final DateTime createdAt;
+  final DateTime updatedAt;
+
   JobsResponse({
     required this.id,
     required this.title,
@@ -42,19 +58,4 @@ class JobsResponse {
         createdAt: DateTime.parse(json['createdAt']),
         updatedAt: DateTime.parse(json['updatedAt']),
       );
-
-  final String id;
-  final String title;
-  final String location;
-  final String company;
-  final bool hiring;
-  final String description;
-  final String salary;
-  final String period;
-  final String contract;
-  final List<String> requirements;
-  final String imageUrl;
-  final String agentId;
-  final DateTime createdAt;
-  final DateTime updatedAt;
 }

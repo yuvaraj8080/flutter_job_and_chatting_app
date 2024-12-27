@@ -8,6 +8,8 @@ class JobsNotifier extends ChangeNotifier {
   late Future<JobsResponse> recent;
   late Future<GetJobRes> job;
 
+
+
   getJobs() {
     jobList = JobsHelper.getJobs();
   }

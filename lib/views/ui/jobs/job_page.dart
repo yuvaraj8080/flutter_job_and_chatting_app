@@ -7,6 +7,7 @@ import 'package:jobhub_v1/controllers/exports.dart';
 import 'package:jobhub_v1/models/request/bookmarks/bookmarks_model.dart';
 import 'package:jobhub_v1/models/request/chat/create_chat.dart';
 import 'package:jobhub_v1/models/request/messaging/send_message.dart';
+import 'package:jobhub_v1/models/response/jobs/jobs_response.dart';
 import 'package:jobhub_v1/services/helpers/chat_helper.dart';
 import 'package:jobhub_v1/services/helpers/messaging_helper.dart';
 import 'package:jobhub_v1/views/common/app_bar.dart';
@@ -21,6 +22,7 @@ class JobPage extends StatefulWidget {
 
   final String title;
   final String id;
+  // final JobsResponse job;
 
   @override
   State<JobPage> createState() => _JobPageState();

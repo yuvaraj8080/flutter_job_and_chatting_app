@@ -16,7 +16,6 @@ class JobsHelper {
 
       final Uri url = Config.getFullUrl(Config.jobs);
 
-      print(url);
       final response = await client.get(
         url,
         headers: requestHeaders,
@@ -62,6 +61,7 @@ class JobsHelper {
     }
   }
 
+  ///// GET RECENT JOB /////
   static Future<JobsResponse> getRecent() async {
     final requestHeaders = <String, String>{
       'Content-Type': 'application/json',

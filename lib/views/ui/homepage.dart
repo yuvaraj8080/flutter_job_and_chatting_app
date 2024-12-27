@@ -87,11 +87,10 @@ class _HomePageState extends State<HomePage> {
                       child: FutureBuilder(
                         future: jobNotifier.jobList,
                         builder: (context, snapshot) {
-                          if (snapshot.connectionState ==
-                              ConnectionState.waiting) {
+                          if (snapshot.connectionState == ConnectionState.waiting) {
                             return const HorizontalShimmer();
                           } else if (snapshot.hasError) {
-                            return Text('Error ${snapshot.error}');
+                            return Center(child: Text('Error ${snapshot.error}'));
                           } else {
                             final jobs = snapshot.data;
                             return ListView.builder(
@@ -130,8 +129,7 @@ class _HomePageState extends State<HomePage> {
                     FutureBuilder(
                       future: jobNotifier.recent,
                       builder: (context, snapshot) {
-                        if (snapshot.connectionState ==
-                            ConnectionState.waiting) {
+                        if (snapshot.connectionState == ConnectionState.waiting) {
                           return const VerticalShimmer();
                         } else if (snapshot.hasError) {
                           return Text('Error ${snapshot.error}');
