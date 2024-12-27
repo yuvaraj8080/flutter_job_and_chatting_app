@@ -31,10 +31,10 @@ class _MainScreenState extends State<MainScreen> {
             },
           ),
           mainScreen: currentSreen(),
-          borderRadius: 30,
+          borderRadius:35,
           showShadow: true,
-          angle: 0,
-          slideWidth: 250,
+          angle:10,
+          slideWidth: 200,
           menuBackgroundColor: Color(kLightBlue.value),
         );
       },

@@ -67,9 +67,7 @@ class JobsHelper {
       'Content-Type': 'application/json',
     };
 
-    final url = Uri.http(Config.apiUrl, Config.jobs, {'new': 'true'});
-    // final Uri url = Config.getFullUrl(Config.jobs);
-
+    final Uri url = Config.getFullUrl(Config.jobs, queryParameters: {'new': 'true'});
 
     final response = await client.get(
       url,

@@ -40,42 +40,49 @@ class VerticalTile extends StatelessWidget {
                     children: [
                       CircleAvatar(
                         backgroundColor: Color(kLightGrey.value),
-                        radius: 25,
+                        radius: 20,
                         backgroundImage: NetworkImage(job!.imageUrl),
                       ),
-                      const WidthSpacer(width: 20),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      const WidthSpacer(width:10),
+                      Row(
+                        mainAxisAlignment:MainAxisAlignment.spaceEvenly,
                         children: [
-                          SizedBox(
-                            width: width * 0.5,
-                            child: ReusableText(
-                              text: job!.company,
-                              style: appstyle(
-                                16,
-                                Color(kDark.value),
-                                FontWeight.w600,
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SizedBox(
+                                width: width * 0.5,
+                                child: ReusableText(
+                                  text: job!.company,
+                                  style: appstyle(
+                                    16,
+                                    Color(kDark.value),
+                                    FontWeight.w600,
+                                  ),
+                                ),
                               ),
-                            ),
+                              SizedBox(
+                                width: width * 0.5,
+                                child: ReusableText(
+                                  text: job!.title,
+                                  style: appstyle(
+                                    15,
+                                    Color(kDarkGrey.value),
+                                    FontWeight.w600,
+                                  ),
+                                ),
+                              ),
+
+                            ],
                           ),
-                          SizedBox(
-                            width: width * 0.5,
-                            child: ReusableText(
-                              text: job!.title,
-                              style: appstyle(
-                                16,
-                                Color(kDarkGrey.value),
-                                FontWeight.w600,
-                              ),
-                            ),
+                          CircleAvatar(
+                            radius: 18,
+                            backgroundColor: Color(kLight.value),
+                            child: const Icon(Ionicons.chevron_forward),
                           ),
                         ],
                       ),
-                      CircleAvatar(
-                        radius: 18,
-                        backgroundColor: Color(kLight.value),
-                        child: const Icon(Ionicons.chevron_forward),
-                      ),
+
                     ],
                   ),
                 ),
@@ -87,12 +94,12 @@ class VerticalTile extends StatelessWidget {
                 children: [
                   ReusableText(
                     text: job!.salary,
-                    style: appstyle(23, Color(kDark.value), FontWeight.w600),
+                    style: appstyle(16, Color(kDark.value), FontWeight.w600),
                   ),
                   ReusableText(
-                    text: '/${job!.period}',
+                    text: ' /${job!.period}',
                     style: appstyle(
-                      20,
+                      16,
                       Color(kDarkGrey.value),
                       FontWeight.w600,
                     ),

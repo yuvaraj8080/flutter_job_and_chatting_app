@@ -11,8 +11,9 @@ class Config {
   static const String chatsUrl = '/api/chats';
   static const String messagingUrl = '/api/messages';
 
-  // Method to get full URL for a specific endpoint
-  static Uri getFullUrl(String endpoint) {
-    return Uri.parse('$apiUrl$endpoint');
+
+  // Method to get full URL for a specific endpoint with optional query parameters
+  static Uri getFullUrl(String endpoint, {Map<String, String>? queryParameters}) {
+    return Uri.parse('$apiUrl$endpoint').replace(queryParameters: queryParameters);
   }
 }
