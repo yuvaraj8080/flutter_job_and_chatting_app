@@ -36,6 +36,7 @@ class BookMarkHelper {
     }
   }
 
+
   // DELETE BOOKMARKS
   static Future<bool> deleteBookmarks(String jobId) async {
     final prefs = await SharedPreferences.getInstance();

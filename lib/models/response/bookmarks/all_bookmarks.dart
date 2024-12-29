@@ -5,6 +5,11 @@ List<AllBookmark> allBookmarkFromJson(String str) => List<AllBookmark>.from(
     );
 
 class AllBookmark {
+
+  final String id;
+  final Job job;
+  final String userId;
+
   AllBookmark({
     required this.id,
     required this.job,
@@ -16,12 +21,21 @@ class AllBookmark {
         job: Job.fromJson(json['job']),
         userId: json['userId'],
       );
-  final String id;
-  final Job job;
-  final String userId;
+
 }
 
 class Job {
+
+  final String id;
+  final String title;
+  final String location;
+  final String company;
+  final String salary;
+  final String period;
+  final String contract;
+  final String imageUrl;
+  final String agentId;
+
   Job({
     required this.id,
     required this.title,
@@ -45,13 +59,5 @@ class Job {
         imageUrl: json['imageUrl'],
         agentId: json['agentId'] ?? '',
       );
-  final String id;
-  final String title;
-  final String location;
-  final String company;
-  final String salary;
-  final String period;
-  final String contract;
-  final String imageUrl;
-  final String agentId;
+
 }

@@ -6,7 +6,11 @@ BookmarkReqResModel bookmarkReqResModelFromJson(String str) =>
 String bookmarkReqResModelToJson(BookmarkReqResModel data) =>
     json.encode(data.toJson());
 
+
 class BookmarkReqResModel {
+
+  final String job;
+
   BookmarkReqResModel({
     required this.job,
   });
@@ -15,7 +19,6 @@ class BookmarkReqResModel {
       BookmarkReqResModel(
         job: json['job'],
       );
-  final String job;
 
   Map<String, dynamic> toJson() => {
         'job': job,
