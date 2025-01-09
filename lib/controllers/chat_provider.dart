@@ -16,6 +16,8 @@ class ChatNotifier extends ChangeNotifier {
     notifyListeners();
   }
 
+
+
   List<String> get online => _online;
 
   set onlineUsers(List<String> newList) {

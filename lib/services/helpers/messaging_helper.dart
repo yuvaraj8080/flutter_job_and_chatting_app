@@ -40,10 +40,7 @@ class MesssagingHelper {
   }
 
   // FIX: added try-catch
-  static Future<List<ReceivedMessge>> getMessages(
-    String chatId,
-    int offset,
-  ) async {
+  static Future<List<ReceivedMessge>> getMessages(String chatId,int offset) async {
     try {
       debugPrint('----------FETCHING MESSAGES-------------');
       final prefs = await SharedPreferences.getInstance();

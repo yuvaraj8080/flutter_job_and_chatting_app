@@ -66,8 +66,7 @@ class _ChatsListState extends State<ChatsList> {
                   itemCount: chats!.length,
                   itemBuilder: (context, index) {
                     final chat = chats[index];
-                    final user = chat.users
-                        .where((user) => user.id != chatNotifier.userId);
+                    final user = chat.users.where((user) => user.id != chatNotifier.userId);
                     // Fix: Bad state: No element for all the places [
                     // .first] was used when the list was empty
                     final noUser = user.isEmpty;
@@ -135,8 +134,7 @@ class _ChatsListState extends State<ChatsList> {
                               padding: EdgeInsets.only(right: 4.h),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.end,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
                                   ReusableText(
                                     text: chatNotifier.msgTime(

@@ -1,15 +1,22 @@
 import 'dart:convert';
 
 //  FIX: ERROR: type '(Map<String, dynamic>) => Sender' is not a subtype of type '(dynamic) => dynamic' of 'f'
-List<GetChats> getChatsFromJson(String str) => (json.decode(str) as List)
-    .cast<Map<String, dynamic>>()
-    .map(GetChats.fromJson)
-    .toList();
+List<GetChats> getChatsFromJson(String str) => (json.decode(str) as List).cast<Map<String, dynamic>>().map(GetChats.fromJson).toList();
 
-String getChatsToJson(List<GetChats> data) =>
-    json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+
+String getChatsToJson(List<GetChats> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+
 
 class GetChats {
+
+  final String id;
+  final String chatName;
+  final bool isGroupChat;
+  final List<Sender> users;
+  final DateTime createdAt;
+  final DateTime updatedAt;
+  final LatestMessage latestMessage;
+
   GetChats({
     required this.id,
     required this.chatName,
@@ -25,22 +32,12 @@ class GetChats {
         id: json['_id'],
         chatName: json['chatName'],
         isGroupChat: json['isGroupChat'],
-        users: List<Sender>.from(
-          (json['users'] as List)
-              .cast<Map<String, dynamic>>()
-              .map(Sender.fromJson),
-        ),
+        users: List<Sender>.from((json['users'] as List).cast<Map<String, dynamic>>().map(Sender.fromJson)),
         createdAt: DateTime.parse(json['createdAt']),
         updatedAt: DateTime.parse(json['updatedAt']),
         latestMessage: LatestMessage.fromJson(json['latestMessage']),
       );
-  final String id;
-  final String chatName;
-  final bool isGroupChat;
-  final List<Sender> users;
-  final DateTime createdAt;
-  final DateTime updatedAt;
-  final LatestMessage latestMessage;
+
 
   Map<String, dynamic> toJson() => {
         '_id': id,
@@ -53,7 +50,15 @@ class GetChats {
       };
 }
 
+
 class LatestMessage {
+
+  final String id;
+  final Sender sender;
+  final String content;
+  final String receiver;
+  final String chat;
+
   LatestMessage({
     required this.id,
     required this.sender,
@@ -69,11 +74,7 @@ class LatestMessage {
         receiver: json['receiver'],
         chat: json['chat'],
       );
-  final String id;
-  final Sender sender;
-  final String content;
-  final String receiver;
-  final String chat;
+
 
   Map<String, dynamic> toJson() => {
         '_id': id,
@@ -84,7 +85,15 @@ class LatestMessage {
       };
 }
 
+
+
 class Sender {
+
+  final String id;
+  final String username;
+  final String email;
+  final String profile;
+
   Sender({
     required this.id,
     required this.username,
@@ -98,10 +107,7 @@ class Sender {
         email: json['email'],
         profile: json['profile'],
       );
-  final String id;
-  final String username;
-  final String email;
-  final String profile;
+
 
   Map<String, dynamic> toJson() => {
         '_id': id,
