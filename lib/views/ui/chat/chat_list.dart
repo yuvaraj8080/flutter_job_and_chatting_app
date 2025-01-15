@@ -77,10 +77,8 @@ class _ChatsListState extends State<ChatsList> {
                           Get.to(
                             () => ChatPage(
                               id: chat.id,
-                              title:
-                                  noUser ? 'Unknown user' : user.first.username,
-                              profile:
-                                  noUser ? kDefaultImage : user.first.profile,
+                              title: noUser ? 'Unknown user' : user.first.username,
+                              profile: noUser ? kDefaultImage : user.first.profile,
                               user: [chat.users[0].id, chat.users[1].id],
                             ),
                           );
