@@ -195,6 +195,7 @@ class _JobPageState extends State<JobPage> {
                             onTap: () async {
                               // var data = await ShzaredPreferences.getInstance();
 
+
                               final model = CreateChat(userId: job.agentId);
                               print(model.userId);
                               await ChatHelper.apply(model).then((response) {

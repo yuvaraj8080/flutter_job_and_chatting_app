@@ -20,7 +20,8 @@ class MesssagingHelper {
       'token': 'Bearer $token',
     };
 
-    final url = Uri.http(Config.apiUrl, Config.messagingUrl);
+    final Uri url = Config.getFullUrl(Config.messagingUrl);
+
     final response = await client.post(
       url,
       headers: requestHeaders,
@@ -51,11 +52,9 @@ class MesssagingHelper {
         'token': 'Bearer $token',
       };
 
-      final url = Uri.http(
-        Config.apiUrl,
-        '${Config.messagingUrl}/$chatId',
-        {'page': offset.toString()},
-      );
+
+      // final url = Uri.http(Config.apiUrl,'${Config.messagingUrl}/$chatId',{'page': offset.toString()},
+      final Uri url = Config.getFullUrl('${Config.messagingUrl}/$chatId', queryParameters:{'page': offset.toString()});
       final response = await client.get(
         url,
         headers: requestHeaders,
