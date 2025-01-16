@@ -35,9 +35,9 @@ class _BookMarkPageState extends State<BookMarkPage> {
             future: bookMarkNotifier.bookmarks,
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
-                return const CircularProgressIndicator();
+                return Center(child: const CircularProgressIndicator());
               } else if (snapshot.hasError) {
-                return Text('Error ${snapshot.error}');
+                return Text('Error: ${snapshot.error}');
               } else {
                 final bookmark = snapshot.data;
                 return ListView.builder(

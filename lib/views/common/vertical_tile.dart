@@ -44,43 +44,38 @@ class VerticalTile extends StatelessWidget {
                         backgroundImage: NetworkImage(job!.imageUrl),
                       ),
                       const WidthSpacer(width:10),
-                      Row(
-                        mainAxisAlignment:MainAxisAlignment.spaceEvenly,
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              SizedBox(
-                                width: width * 0.5,
-                                child: ReusableText(
-                                  text: job!.company,
-                                  style: appstyle(
-                                    16,
-                                    Color(kDark.value),
-                                    FontWeight.w600,
-                                  ),
-                                ),
+                          SizedBox(
+                            width: width * 0.5,
+                            child: ReusableText(
+                              text: job!.company,
+                              style: appstyle(
+                                16,
+                                Color(kDark.value),
+                                FontWeight.w600,
                               ),
-                              SizedBox(
-                                width: width * 0.5,
-                                child: ReusableText(
-                                  text: job!.title,
-                                  style: appstyle(
-                                    15,
-                                    Color(kDarkGrey.value),
-                                    FontWeight.w600,
-                                  ),
-                                ),
+                            ),
+                          ),
+                          SizedBox(
+                            width: width * 0.5,
+                            child: ReusableText(
+                              text: job!.title,
+                              style: appstyle(
+                                15,
+                                Color(kDarkGrey.value),
+                                FontWeight.w600,
                               ),
+                            ),
+                          ),
 
-                            ],
-                          ),
-                          CircleAvatar(
-                            radius: 18,
-                            backgroundColor: Color(kLight.value),
-                            child: const Icon(Ionicons.chevron_forward),
-                          ),
                         ],
+                      ),
+                      CircleAvatar(
+                        radius: 18,
+                        backgroundColor: Color(kLight.value),
+                        child: const Icon(Ionicons.chevron_forward),
                       ),
 
                     ],

@@ -14,77 +14,88 @@ class BookMarkTileWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(bottom: 12.h),
+      padding: const EdgeInsets.all(8.0),
       child: GestureDetector(
-        onTap: () {
-          Get.to(() => JobPage(title: job.job.company, id: job.job.id));
-        },
-        child: Container(
-          padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 20.w),
+        onTap:()=>  Get.to(() => JobPage(title: job.job.company, id: job.job.id)),
+      child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
           height: hieght * 0.15,
           width: width,
-          color: Color(kLightGrey.value),
+          decoration: BoxDecoration(
+            color: Color(kLightGrey.value),
+            borderRadius: BorderRadius.circular(10),
+          ),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(
-                    children: [
-                      CircleAvatar(
-                        radius: 30,
-                        backgroundImage: NetworkImage(job.job.imageUrl),
-                      ),
-                      const WidthSpacer(width: 10),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          ReusableText(
-                            text: job.job.company,
-                            style: appstyle(
-                              20,
-                              Color(kDark.value),
-                              FontWeight.w600,
-                            ),
-                          ),
-                          SizedBox(
-                            width: width * 0.5,
-                            child: ReusableText(
-                              text: job.job.title,
-                              style: appstyle(
-                                20,
-                                Color(kDarkGrey.value),
-                                FontWeight.w600,
+                  // Fix: added this to remove "RenderFlex children have non-zero flex but incoming width constraints are unbounded."
+                  SizedBox(
+                    width: width * 0.78,
+                    child: Row(
+                      // Fix: added this to remove "RenderFlex children have non-zero flex but incoming width constraints are unbounded."
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Color(kLightGrey.value),
+                          radius: 20,
+                          backgroundImage: NetworkImage(job.job.imageUrl),
+                        ),
+                        const WidthSpacer(width:10),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(
+                              width: width * 0.5,
+                              child: ReusableText(
+                                text: job.job.company,
+                                style: appstyle(
+                                  16,
+                                  Color(kDark.value),
+                                  FontWeight.w600,
+                                ),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                  CircleAvatar(
-                    radius: 18,
-                    child: Icon(
-                      Ionicons.chevron_forward,
-                      color: Color(kOrange.value),
+                            SizedBox(
+                              width: width * 0.5,
+                              child: ReusableText(
+                                text: job.job.title,
+                                style: appstyle(
+                                  15,
+                                  Color(kDarkGrey.value),
+                                  FontWeight.w600,
+                                ),
+                              ),
+                            ),
+
+                          ],
+                        ),
+                        CircleAvatar(
+                          radius: 18,
+                          backgroundColor: Color(kLight.value),
+                          child: const Icon(Ionicons.chevron_forward),
+                        ),
+
+                      ],
                     ),
                   ),
                 ],
               ),
               Padding(
-                padding: EdgeInsets.only(left: 65.w),
+                padding: EdgeInsets.only(left: 0.w),
                 child: Row(
                   children: [
                     ReusableText(
                       text: job.job.salary,
-                      style: appstyle(22, Color(kDark.value), FontWeight.w600),
+                      style: appstyle(16, Color(kDark.value), FontWeight.w600),
                     ),
                     ReusableText(
-                      text: '/${job.job.period}',
+                      text: ' /${job.job.period}',
                       style: appstyle(
-                        20,
+                        16,
                         Color(kDarkGrey.value),
                         FontWeight.w600,
                       ),
